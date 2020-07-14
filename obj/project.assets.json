@@ -5711,11 +5711,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\User\\Documents\\CoreWpfApp\\CoreWpfApp.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\CoreWpfApp\\CoreWpfApp.csproj",
       "projectName": "CoreWpfApp",
-      "projectPath": "c:\\Users\\User\\Documents\\CoreWpfApp\\CoreWpfApp.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\CoreWpfApp\\CoreWpfApp.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\User\\Documents\\CoreWpfApp\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\CoreWpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
