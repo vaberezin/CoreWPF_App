@@ -10,8 +10,9 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
-        TextElement.FontSize="14"
+        TextElement.FontSize="12"
         FontFamily="{materialDesign:MaterialDesignFont}"
+        
         >
     <Grid>
         <Grid.ColumnDefinitions>

@@ -5,21 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoreWpfApp"
         mc:Ignorable="d"
-        Title="Группа ВК" Height="450" Width="800">
-    <Grid>
+        Title="Расчеты К2" Height="450" Width="800">
+    <Grid Name="RainGrid" IsEnabled="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>          
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Ливневая канализация" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontStyle="Italic"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button x:Name="SourceDataBtn" Content="Исходные данные" Padding="5" FontSize="12"/>
+            <Button x:Name="CalcSecBtn" Content="Секундный расход" Padding="5" FontSize="12"/>
+            <Button x:Name="CalcYearBtn" Content="Годовой расход" Padding="5" FontSize="12"/>
+            <Button x:Name="SewageMatchBtn" Content="Подбор очистных" Padding="5" FontSize="12"/>
+            <Button x:Name="PumpMatchBtn" Content="Подбор насосов" Padding="5" FontSize="12"/>
+            <Button x:Name="TankMatchBtn" Content="Регулирующая емкость" Padding="5" FontSize="12"/>
+            <Button x:Name="CalcComplexBtn" Content="Полный расчет" Padding="5" FontSize="12"/>
+        </StackPanel>
+        <Canvas  Grid.Row="1" Grid.Column="0" Panel.ZIndex="-1">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF01515" Offset="0.009"/>
+                    <GradientStop Color="#FFA8B242" Offset="1"/>
+                    <GradientStop Color="#FFD81598" Offset="0.435"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
     </Grid>
 </Window>
