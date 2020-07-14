@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,18 +20,13 @@ namespace CoreWpfApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RainFlowCalcWindow : Window
     {
-        public MainWindow()
+        public RainFlowCalcWindow()
         {
             InitializeComponent();
         }
 
-        private void ButtoRainFlowCalcBtn_Click(object sender, RoutedEventArgs e){
-            MessageBox.Show("Окно должно быть открыто");
-           RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
-           
-           rainFlowCalc.Show();
-        }
+        
     }
 }
