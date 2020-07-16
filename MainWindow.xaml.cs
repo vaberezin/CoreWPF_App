@@ -26,11 +26,11 @@ namespace CoreWpfApp
         {
             InitializeComponent();
         }
-
+        
+        
         private void ButtoRainFlowCalcBtn_Click(object sender, RoutedEventArgs e){
-            MessageBox.Show("Окно должно быть открыто");
-           RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
            
+           RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
            rainFlowCalc.Show();
         }
     }

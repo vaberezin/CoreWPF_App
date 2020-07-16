@@ -25,8 +25,13 @@ namespace CoreWpfApp
         public RainFlowCalcWindow()
         {
             InitializeComponent();
+            Region.ItemsSource = Regions;
+            Place.ItemsSource = Places;
         }
+        List<string> Regions = ListForCombobox.getRegionList();
+        List<string> Places = ListForCombobox.getPlaceList();
 
         
+
     }
 }
