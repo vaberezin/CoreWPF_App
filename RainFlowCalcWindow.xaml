@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoreWpfApp"
         mc:Ignorable="d"
-        Title="Расчеты К2" Height="450" Width="800">
+        Title="Расчеты К2" MinHeight="720" MinWidth="1280">
     <Grid Name="RainGrid" IsEnabled="True">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition MinWidth="780"/>
+            <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -44,8 +44,8 @@
         <Grid x:Name="DataInputGrid" ShowGridLines="True" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="20px">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6*"/>
-                <ColumnDefinition Width="1.3*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30px"></RowDefinition>
@@ -58,16 +58,82 @@
             <TextBlock x:Name="VariableValue" Grid.Column="2" Grid.Row="0" Text="Значение" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
             <!-- Data Input Section наполнение грида данными-->
 
+                    <!-- Data Input Section stackpanel "Наименование"-->
 
-            <StackPanel x:Name="DataInputPanel" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="1" CanVerticallyScroll="True" >
+
+
+            <StackPanel x:Name="DefinitionStackPanel" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="1" CanVerticallyScroll="True" >
                 <TextBlock x:Name="ChooseRegion" Text="Выберите регион:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <ComboBox x:Name="Region" Margin="0, 0, 15, 0"  />
                 
                 <TextBlock x:Name="ChoosePlace" Text="Выберите ближайший населенный пункт:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <ComboBox x:Name="Place" Margin="0, 0, 15, 0"  />
+                <TextBlock MinHeight="30" Text="Площадь Асфальтобетонных покрытий, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Площадь Кровель, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Площадь Щебеночных покрытий, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Площадь Газонов и зеленых насаждений, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Интенсивность дождя, л/с на 1 га, для данной местности продолжительностью 20 мин при Р = 1 год" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Период однократного превышения расчётной интенсивности дождя, годы" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Время поверхностной концентрации (лотки), мин" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Длина участков лотков, м" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Расчётная скорость течения на участке, м/с, в соответствии с продольным уклоном лотков:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Время поверхностной концентрации (коллектор), мин" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Длина расчетных участков коллектора, м" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Расчётная скорость течения на участке, м/с, принимается в соответствии с гидравлическим расчётом сети" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Количество участков коллектора, шт." VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+
             </StackPanel>
             
+            <StackPanel x:Name="SignStackPanel" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1" CanVerticallyScroll="True" >
+                
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Height="25"  Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
 
+                <TextBlock MinHeight="30" Text="Fд" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Fк" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Fщ" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Fгаз." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="q20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Р" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="t_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="L_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="v_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="t_колл." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="L_колл." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="v_колл." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="N_уч." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                           
+            </StackPanel>
+
+            <StackPanel x:Name="DataInputStackPanel" HorizontalAlignment="Stretch" Grid.Column="3" Grid.Row="1" CanVerticallyScroll="True" >
+
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                         
+            </StackPanel>
+                         
+                         
 
         </Grid>
 
