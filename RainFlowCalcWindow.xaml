@@ -93,16 +93,16 @@
                 <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock Height="25"  Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
 
-                <TextBlock MinHeight="30" Text="Fд" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="Fк" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="Fщ" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="Fгаз." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="F_общ" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="F_д" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="F_к" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="F_щ" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="F_газ." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="q20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Р" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="t_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="t_конц." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="L_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="v_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="t_колл." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="v_лот" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>                
                 <TextBlock MinHeight="30" Text="L_колл." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="v_колл." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="N_уч." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
@@ -117,19 +117,19 @@
                 <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
                 <TextBlock Text="-" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
 
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
-                <TextBox MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="F_tot" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="F_road" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="F_roof" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="F_shcheb" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="F_grass" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="RainIntensivity" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="RainPossibility" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="ConcentrationTime" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="LotokLength" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="LotokVelocity" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="CollectorLength" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="CollectorVelocity" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
+                <TextBox local:Name="SectionsNumber" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
                          
             </StackPanel>
                          

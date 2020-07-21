@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CoreWpfApp.RainCalculation;
+using System.Windows.Data.Bindings;
+
 
 
 
@@ -24,14 +27,23 @@ namespace CoreWpfApp
     {
         public RainFlowCalcWindow()
         {
+            
             InitializeComponent();
             Region.ItemsSource = Regions;
             Place.ItemsSource = Places;
+            RainVariables Rv = new RainVariables();
+            
+            
         }
         List<string> Regions = ListForCombobox.getRegionList();
         List<string> Places = ListForCombobox.getPlaceList();
 
         
+        //Bindings https://metanit.com/sharp/wpf/11.php
+
+        Binding binding = new Binding();
+        binding.
+
 
     }
 }
