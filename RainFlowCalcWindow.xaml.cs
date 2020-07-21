@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CoreWpfApp.RainCalculation;
-using System.Windows.Data.Bindings;
+using CoreWpfApp.RainCalcs; //»—œŒÀ‹«”≈Ã111
+
 
 
 
@@ -25,13 +25,20 @@ namespace CoreWpfApp
     /// </summary>
     public partial class RainFlowCalcWindow : Window
     {
+        
         public RainFlowCalcWindow()
         {
             
             InitializeComponent();
             Region.ItemsSource = Regions;
             Place.ItemsSource = Places;
-            RainVariables Rv = new RainVariables();
+
+            //binding.ElementName = "F_tot";
+            //binding.Path = new PropertyPath("Text");
+            //F_tot.SetBinding()
+
+            RainVariables rainVariables = new RainVariables();
+                
             
             
         }
@@ -39,11 +46,56 @@ namespace CoreWpfApp
         List<string> Places = ListForCombobox.getPlaceList();
 
         
-        //Bindings https://metanit.com/sharp/wpf/11.php
+        
 
-        Binding binding = new Binding();
-        binding.
+        void SetValuesFromComboboxes(RainVariables rainVariables)
+        {
+            rainVariables.F = Double.Parse(F_tot.Text);
+            rainVariables.F_road = Double.Parse(F_road.Text);
+            rainVariables.F_roof = Double.Parse(F_roof.Text);
+            rainVariables.F_gravel = Double.Parse(F_shcheb.Text);
+            rainVariables.F_green = Double.Parse(F_grass.Text);
+            rainVariables.Q_20 = Int32.Parse(RainIntensivity.Text);
+            rainVariables.P = Double.Parse(RainPossibility.Text);
+            rainVariables.t_con = Double.Parse(ConcentrationTime.Text);
+            rainVariables.l_lotok = Double.Parse(LotokLength.Text);
+            rainVariables.v_lotok = Double.Parse(LotokVelocity.Text);
+            rainVariables.l_p = Double.Parse(CollectorLength.Text);
+            rainVariables.v_p = Double.Parse(CollectorVelocity.Text);
+            rainVariables.N_sections = Int32.Parse(SectionsNumber.Text);
+            rainVariables.n = 
+            rainVariables.A();
+            rainVariables.Psy_mid();
+            rainVariables.Z_mid();
+            rainVariables.t_r();
+            rainVariables.t_can();
+            rainVariables.t_p();
 
+            //Target VALUES:->
+            rainVariables.Q_rRain();
+            rainVariables.Q_rIce();
+            rainVariables.Q_cal();
+            //Target VALUES<-:
+
+
+            rainVariables.beta =;
+            rainVariables.m_r;
+            rainVariables.gamma;
+            rainVariables.K;
+            rainVariables.Z_i;
+            rainVariables.Psy_i;
+            rainVariables.h_c;
+            //rainVariables.t_c; later, not for MVP
+            rainVariables.K_y();
+            rainVariables.F_y() ;
+            rainVariables.F_roadRoof() ;
+            
+
+
+        }
+
+
+        
 
     }
 }
