@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CoreWpfApp.RainCalcs; //ÈÑÏÎËÜÇÓÅÌ111
+using CoreWpfApp.RainCalcs; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½111
 
 
 
@@ -94,7 +94,22 @@ namespace CoreWpfApp
 
         }
 
+        double getA(RainVariables rainVariables){
+            double _A = 0;
 
+            _A = rainVariables.Q_20 * Math.Pow(20, rainVariables.n)*Math.Pow((1+(Math.Log10(rainVariables.P)/Math.Log10(rainVariables.m_r))), rainVariables.gamma);
+
+            return _A;
+
+        }
+
+        double getPsy_mid(RainVariables rainvariables){
+            double _Psy_mid = 0; 
+
+            _Psy_mid = 
+              
+            return _Psy_mid;
+        }
         
 
     }

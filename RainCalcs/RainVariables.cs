@@ -37,30 +37,30 @@ namespace CoreWpfApp.RainCalcs
         internal double Z_i; //table
         internal double Psy_i; //table
         internal int h_c; //table
-        public double t_c() //property+
+        public double t_c() //
         {
              return t_p;
         }
-        public double K_y() //property+ -> METHOD 21072020+
+        public double K_y() // -> METHOD 21072020+
         
         {
             double _F_y = F_y();
             return 1 - (_F_y / F);
         }
-        public double F_y() //property+ -> METHOD 21072020+
+        public double F_y() // -> METHOD 21072020+
         
         {
             return F_road;
         }
 
-        public double F_roadRoof() //property+ -> METHOD 21072020+
+        public double F_roadRoof() //-> METHOD 21072020+
         
         {
             return F_road + F_roof;
             
         }
 
-        public double t_r() //property+ -> METHOD 21072020+
+        public double t_r() //-> METHOD 21072020+
         {
              return t_con + t_can + t_p;
         }
