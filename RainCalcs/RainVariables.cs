@@ -18,6 +18,7 @@ namespace CoreWpfApp.RainCalcs
         internal decimal Psy_mid; //method+
         internal decimal Z_mid; //method+
         public int N_sections;
+        internal decimal t_r;
         internal decimal t_con; //ok+
         internal decimal t_can; //method+
         internal decimal t_p; //method+
@@ -60,10 +61,7 @@ namespace CoreWpfApp.RainCalcs
             
         }
 
-        public decimal t_r() //-> METHOD 21072020+
-        {
-             return t_con + t_can + t_p;
-        }
+        
 
         
     }

@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CoreWpfApp.RainCalcs; //����������111
 using CoreWpfApp.AppDB;
-using MySqlX.XDevAPI.Common;
+
 
 namespace CoreWpfApp
 {
@@ -25,24 +25,20 @@ namespace CoreWpfApp
     {
         
         public RainFlowCalcWindow()
-        {
-            
+        {            
             InitializeComponent();
 
             Region.ItemsSource = Regions;
             Place.ItemsSource = Places;
 
-            RainVariables rainVariables = new RainVariables();
-              
+            RainVariables rainVariables = new RainVariables();              
         }
         List<string> Regions = ListForCombobox.getRegionList();
         List<string> Places = ListForCombobox.getPlaceList();
 
         
         void SetValuesFromComboboxes(RainVariables rainVariables)
-        {
-            
-
+        {    
             rainVariables.F = decimal.Parse(F_tot.Text);
             rainVariables.F_road = decimal.Parse(F_road.Text);
             rainVariables.F_roof = decimal.Parse(F_roof.Text);
@@ -57,17 +53,17 @@ namespace CoreWpfApp
             rainVariables.v_p = decimal.Parse(CollectorVelocity.Text);
             rainVariables.N_sections = Int32.Parse(SectionsNumber.Text);
             rainVariables.n = getN(rainVariables);
-            (decimal)getA(rainVariables); //+
-            getPsy_mid(rainVariables); //+
-            getZ_mid(rainVariables); //+
-            gett_r(rainVariables);
+            rainVariables.A = (decimal)getA(rainVariables); //+
+            rainVariables.Psy_mid = getPsy_mid(rainVariables); //+
+            rainVariables.Z_mid = getZ_mid(rainVariables); //+
+            rainVariables.t_r = gett_r(rainVariables);
             //gett_can(rainVariables); // enters to gett_r method
             //gett_p(rainVariables); // enters to gett_r method
 
             //Target VALUES:->
-            rainVariables.Q_rRain();
-            rainVariables.Q_rIce();
-            rainVariables.Q_cal();
+            rainVariables.Q_rRain = Q_rRain(rainVariables);
+            rainVariables.Q_rIce = Q_rIce(rainVariables);
+            rainVariables.Q_cal = Q_cal(rainVariables);
             //Target VALUES<-:
 
 
@@ -83,8 +79,6 @@ namespace CoreWpfApp
             rainVariables.F_y() ;
             rainVariables.F_roadRoof();
             
-
-
         }
 
         double getA(RainVariables rainVariables){
@@ -93,7 +87,6 @@ namespace CoreWpfApp
             _A = rainVariables.Q_20 * Math.Pow(20, (double)rainVariables.n)*Math.Pow((1+(Math.Log10((double)rainVariables.P)/Math.Log10((double)rainVariables.m_r))), (double)rainVariables.gamma);
 
             return _A;
-
         }
 
         decimal getPsy_mid(RainVariables rainvariables){
@@ -103,7 +96,6 @@ namespace CoreWpfApp
             decimal K_road = rainvariables.F_road * 0.95m; //tabl10 rek
             decimal K_roof = rainvariables.F_roof * 0.95m; //tabl10 rek
             decimal K_green = rainvariables.F_green * 0.1m; //tabl10 rek
-
 
             _Psy_mid = (K_gravel + K_green + K_road + K_roof) / rainvariables.F;
 
@@ -195,6 +187,7 @@ namespace CoreWpfApp
             decimal _getN = 0;
 
             using(projectappdbContext db = new projectappdbContext()){
+
                 string ChoosenRegion = Region.SelectionBoxItem as string;
 
                 if (rainVariables.P >= 1){
@@ -260,7 +253,6 @@ namespace CoreWpfApp
 
                 var mr = db.Pril2NPlessPaboveMrGamma.Where(el => el.Region == ChoosenRegion).Select(el => el.Gamma).FirstOrDefault();
                 _getGamma = mr;
-
             }
 
             return _getGamma;
@@ -278,5 +270,38 @@ namespace CoreWpfApp
             }
             return _Hc;
         } //end of getting gamma method
+
+        //RESULTs CALCULATION METHODs
+        decimal Q_rRain(RainVariables rainVariables)
+        {
+            double _Q_rRain = 0;
+            
+            _Q_rRain = (double)rainVariables.Z_mid * (double)Math.Pow((double)rainVariables.A, 1.2) * (double)rainVariables.F / Math.Pow((double)rainVariables.t_r, 1.2 * (double)rainVariables.n - 0.1);
+            val1 = (decimal)_Q_rRain;
+
+            return val1;
+        } //end of result calculation method
+
+        decimal Q_rIce(RainVariables rainVariables)
+        {
+            decimal _Q_rIce = 0;
+            
+            _Q_rIce = (5.5m * rainVariables.h_c * rainVariables.K_y() * rainVariables.F) / (10 + rainVariables.t_r);
+            val2 = _Q_rIce;
+
+            return val2;
+        } //end of result calculation method
+
+        //Qcal calculation method
+        decimal val1;
+        decimal val2;
+        decimal Q_cal(RainVariables rainVariables)
+        {
+            decimal _Q_cal = 0;
+
+            _Q_cal = Math.Max(val1, val2) * rainVariables.beta;
+
+            return _Q_cal;
+        }
     }
 }
