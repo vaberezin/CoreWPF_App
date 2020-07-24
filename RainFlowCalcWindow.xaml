@@ -68,16 +68,16 @@
                 
                 <TextBlock x:Name="ChoosePlace" Text="Выберите ближайший населенный пункт:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <ComboBox x:Name="Place" Margin="0, 0, 15, 0"  />
+                <TextBlock MinHeight="30" Text="Расчетная площадь водосбора, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Площадь Асфальтобетонных покрытий, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Площадь Кровель, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Площадь Щебеночных покрытий, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Площадь Газонов и зеленых насаждений, Га" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Интенсивность дождя, л/с на 1 га, для данной местности продолжительностью 20 мин при Р = 1 год" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Период однократного превышения расчётной интенсивности дождя, годы" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="Время поверхностной концентрации (лотки), мин" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Время поверхностной концентрации, мин" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Длина участков лотков, м" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="Расчётная скорость течения на участке, м/с, в соответствии с продольным уклоном лотков:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
-                <TextBlock MinHeight="30" Text="Время поверхностной концентрации (коллектор), мин" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
+                <TextBlock MinHeight="30" Text="Расчётная скорость течения на участке, м/с, в соответствии с продольным уклоном лотков:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>                
                 <TextBlock MinHeight="30" Text="Длина расчетных участков коллектора, м" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Расчётная скорость течения на участке, м/с, принимается в соответствии с гидравлическим расчётом сети" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
                 <TextBlock MinHeight="30" Text="Количество участков коллектора, шт." VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
@@ -132,10 +132,13 @@
                 <TextBox x:Name="SectionsNumber" MinHeight="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" BorderBrush="Aqua" MinWidth="50" Margin="5, 0, 5, 0" TextAlignment="Center" Text="" FontSize="14" FontWeight="Bold"/>
                          
             </StackPanel>
-                         
-                         
 
         </Grid>
+
+        <Button x:Name = "Qr_resultButton" Grid.Row = "2" Grid.Column ="0" VerticalAlignment = "Stretch" HorizontalAlignment = "Stretch"  FontSize = "18" FontStyle = "Italic" Click="QrButton_Click">Рассчитать Qr </Button>
+
+        <TextBlock x:Name = "ResultText" Grid.Row ="2" Grid.Column = "1" HorizontalAlignment = "Stretch" VerticalAlignment = "Center" Text = "Расход в коллекторе дождевой канализации равен:" FontSize = "18" TextAlignment = "Left"/>   
+        <TextBlock x:Name = "ResultTextValue" Grid.Row ="2" Grid.Column = "2" HorizontalAlignment = "Stretch"  VerticalAlignment = "Center" Text = "0 л/сек" FontSize = "18" TextAlignment = "Center"/>
 
     </Grid>
 </Window>

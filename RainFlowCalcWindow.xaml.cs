@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CoreWpfApp.RainCalcs; //����������111
+using CoreWpfApp.RainCalcs;
 using CoreWpfApp.AppDB;
+
 
 
 namespace CoreWpfApp
@@ -31,12 +32,23 @@ namespace CoreWpfApp
             Region.ItemsSource = Regions;
             Place.ItemsSource = Places;
 
-            RainVariables rainVariables = new RainVariables();              
+                          
         }
+
+        RainVariables rainVariables = new RainVariables();
         List<string> Regions = ListForCombobox.getRegionList();
         List<string> Places = ListForCombobox.getPlaceList();
 
-        
+            //FUUUUUUUCKK
+        private void QrButton_Click  (object sender, RoutedEventArgs e){
+           RainVariables rainVariables1 = rainVariables;
+           SetValuesFromComboboxes(rainVariables1);
+           decimal result = Q_rRain(rainVariables1);
+           ResultTextValue.Text = result.ToString();
+           
+        }
+
+        //METHOD TO ASSIGN input data to variables
         void SetValuesFromComboboxes(RainVariables rainVariables)
         {    
             rainVariables.F = decimal.Parse(F_tot.Text);
@@ -70,16 +82,16 @@ namespace CoreWpfApp
             rainVariables.beta = getBeta(rainVariables);
             rainVariables.m_r = getMr(rainVariables);
             rainVariables.gamma = getGamma(rainVariables);
+            rainVariables.h_c = (int)getHc(rainVariables);
             //rainVariables.K; //is used if F_tot > 500 ga (not for MVP)
             //rainVariables.Z_i; //no need at all (method for z mid includes this)
             //rainVariables.Psy_i; //no need at all (method for z mid includes this)
-            rainVariables.h_c = (int)getHc(rainVariables);
             //rainVariables.t_c; later, not for MVP
-            rainVariables.K_y();
-            rainVariables.F_y() ;
-            rainVariables.F_roadRoof();
+            decimal K_y = rainVariables.K_y();
+            decimal F_y = rainVariables.F_y() ;
+            decimal F_roadroof = rainVariables.F_roadRoof();
             
-        }
+        } //end of "method to assign input data to variables"
 
         double getA(RainVariables rainVariables){
              double _A = 0;
@@ -302,6 +314,6 @@ namespace CoreWpfApp
             _Q_cal = Math.Max(val1, val2) * rainVariables.beta;
 
             return _Q_cal;
-        }
+        } // end of Qcal calculation method
     }
 }
