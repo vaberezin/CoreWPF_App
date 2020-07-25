@@ -16,7 +16,7 @@ namespace CoreWpfApp
             List<string> RegionList;
             using (projectappdbContext db = new projectappdbContext())
             {
-                var Regions = db.Pril11RegionIdHcpCvCs.Select(r => r.RegionName).ToList();
+                var Regions = db.Pril2NPlessPaboveMrGamma.Select(p => p.Region).ToList();
                 RegionList = Regions;
             }
             return RegionList;
@@ -27,7 +27,8 @@ namespace CoreWpfApp
             List<string> PlaceList;
             using (projectappdbContext db = new projectappdbContext())
             {
-                var Places = db.Pril2NPlessPaboveMrGamma.Select(p => p.Region).ToList();
+                var Places = db.Pril11RegionIdHcpCvCs.Select(r => r.RegionName).ToList();
+
                 PlaceList = Places;
             }
             return PlaceList;
