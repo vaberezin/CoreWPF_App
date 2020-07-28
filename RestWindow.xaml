@@ -1,27 +1,30 @@
-﻿<Window x:Class="CoreWpfApp.TimerModule.RestWindow"
+﻿<Window x:Class="CoreWpfApp.RestWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CoreWpfApp.TimerModule"
+        xmlns:local="clr-namespace:CoreWpfApp"
         mc:Ignorable="d"
-        Title="Отдыхаем :)" Height="450" Width="800"
+        Title="Группа ВК" Height="450" Width="800"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
+        TextElement.FontSize="12"
         FontFamily="{materialDesign:MaterialDesignFont}"
         
         >
-    <Grid>        
+    <Grid>
+        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>            
+            <RowDefinition Height="100 px"/>            
         </Grid.RowDefinitions>
+        
+        <TextBlock x:Name = "RestTextBlock" Grid.Row = "0" VerticalAlignment = "Center", HorizontalAlignment = "Center" Margin = "50" Text = "Timer Time" FontSize ="36"/>
 
-        
-        
-        
+        <Button x:Name = "ContinueWorkButton" Grid.Row = "1" VerticalAlignment = "Center", HorizontalAlignment = "Center" Height = "80" Click = "ContinueWorkButton_Click" />
         
         
     </Grid>

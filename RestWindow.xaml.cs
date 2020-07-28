@@ -17,23 +17,26 @@ using CoreWpfApp.TimerModule;
 
 
 
-namespace CoreWpfApp.TimerModule
+namespace CoreWpfApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class RestWindow : Window
     {
+        PomoTimer pomoTimer1 = new PomoTimer();
+        RestTextBlock.Text = pomoTimer1.RestLeft;
         public RestWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            pomoTimer1.restTimerAsync();   
+                   
         }
         
-        
-        //private void ButtoRainFlowCalcBtn_Click(object sender, RoutedEventArgs e){
-        //   
-        //   RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
-        //   rainFlowCalc.Show();
-        //}
+        private void ContinueWorkButton_Click(object sender, RoutedEventArgs e){
+            this.Close();
+            
+        }
+               
     }
 }

@@ -16,11 +16,15 @@ using CoreWpfApp;
 
 namespace CoreWpfApp.TimerModule
 {
-    class Timer
+    public class PomoTimer
     {
 
         int workInterval = 25; //default value
         int restInterval = 5; //default value
+
+        public string RestLeft = "";
+        public string WorkLeft = "";
+
 
         int sleepSecond = 1000;
 
@@ -33,6 +37,7 @@ namespace CoreWpfApp.TimerModule
             {
                 RestIntervalLeft.AddSeconds(-1);
                 string WorkLeftShow = RestIntervalLeft.ToString("D");
+                
                 //xaml разметка textbox.text = restLeftShow;
 
                 Thread.Sleep(sleepSecond);        //wait 1 second        
@@ -49,25 +54,30 @@ namespace CoreWpfApp.TimerModule
                 string WorkLeftShow = WorkIntervalLeft.ToString("D");
                 //xaml разметка textbox.text = WorkLeftShow;
 
-                Thread.Sleep(sleepSecond);        //wait 1 second        
-            }
-            //actions after 'while': see below in this block
+                Thread.Sleep(sleepSecond);        //wait 1 second  
 
-            Window RestWindow = new Window();
-            //RestWindow = Window in Xaml разметке.
-            RestWindow.Show();
-            restTimerAsync(); //method runs once restwindow has been shown.
+            if(MinTime == WorkIntervalLeft)      {
+                    //actions after 'while': see below in this block
+
+                RestWindow restWindow = new RestWindow();                
+                
+                restWindow.Show();
+                restTimerAsync(); //method runs once restwindow has been shown.
+                
+                }
+            }
+            
         }
 
 
-        async void workTimerAsync(){
+        public async void workTimerAsync(){
             
             {
                 await(Task.Run(()=>workTimer()));
             }
         }
 
-        async void restTimerAsync(){
+        public async void restTimerAsync(){
             
             {
                 await(Task.Run(()=>restTimer()));
