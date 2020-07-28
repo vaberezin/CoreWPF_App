@@ -36,5 +36,12 @@ namespace CoreWpfApp
            rainFlowCalc.Show();
 
         }
+        PomoTimer pt = new PomoTimer();
+        private void TimerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            pt.workTimerAsync(this);
+            //this.WorkingTimeTxtBlock.Text = pt.WorkLeft;
+        }
     }
 }

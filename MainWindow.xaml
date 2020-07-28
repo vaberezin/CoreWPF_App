@@ -12,6 +12,7 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="12"
         FontFamily="{materialDesign:MaterialDesignFont}"
+        Name="PlitkaApp"
         
         >
     <Grid>
@@ -26,7 +27,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition x:Name="LastRow" Height="*"/>
         </Grid.RowDefinitions>
         <Button x:Name="YandexMusicBtn" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Content="Яндекс.Музыка API" FontSize="24"></Button>
         <Button x:Name="YandexWeatherBtn" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2" Content="Яндекс.Погода API" FontSize="24"></Button>
@@ -37,9 +38,10 @@
         <Button x:Name="WellsBtn" Grid.Column="0" Grid.Row="2" Content="Подбор колодцев" FontSize="18"/>
         <Button x:Name="TaskMgrBtn" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Content="Менеджер задач с историей" FontSize="24"/>
         <Button x:Name="YandexMapsBtn" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Content="Быстрый маршрут по Яндекс.Картам" FontSize="18"/>
-        <Button x:Name="TimerBtn" Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" Content="Таймер отдыха" FontSize="24"/>
-        
-        
-        
+        <Button x:Name="TimerBtn" Grid.Column="3" Grid.Row="3" Height="{Binding ElementName=LastRow, Path=Height}" MinHeight="100" Content="Запустить таймер" FontSize="24" Opacity="0.8" Background="CadetBlue" Click="TimerBtn_Click" />
+
+        <TextBlock x:Name="WorkingText" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" Text="Работаем в своем темпе :)" FontSize="18" TextAlignment="Center" Margin="5"/>
+        <TextBlock x:Name="WorkingTimeTxtBlock" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" Text="Вперед!" FontSize="18" TextAlignment="Center" Margin="5"/>
+
     </Grid>
 </Window>

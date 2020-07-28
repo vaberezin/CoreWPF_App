@@ -15,17 +15,17 @@
         
         >
     <Grid>
-        
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="100 px"/>            
-        </Grid.RowDefinitions>
-        
-        <TextBlock x:Name = "RestTextBlock" Grid.Row = "0" VerticalAlignment = "Center", HorizontalAlignment = "Center" Margin = "50" Text = "Timer Time" FontSize ="36"/>
 
-        <Button x:Name = "ContinueWorkButton" Grid.Row = "1" VerticalAlignment = "Center", HorizontalAlignment = "Center" Height = "80" Click = "ContinueWorkButton_Click" />
-        
-        
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="100 px"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock x:Name = "RestTextBlock" Grid.Row = "0" VerticalAlignment = "Center" HorizontalAlignment = "Center" Margin = "50" Text = "Timer Time" FontSize ="72"/>
+
+    <Button x:Name = "ContinueWorkButton" Grid.Row = "1" VerticalAlignment = "Center" HorizontalAlignment = "Center" Height = "80" Width="200" Click = "ContinueWorkButton_Click" Content="Продолжить работу"/>
+
+
     </Grid>
 </Window>

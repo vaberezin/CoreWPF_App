@@ -22,8 +22,8 @@ namespace CoreWpfApp.TimerModule
         int workInterval = 25; //default value
         int restInterval = 5; //default value
 
-        public string RestLeft = "";
-        public string WorkLeft = "";
+        public string RestLeft = "default";
+        //public string WorkLeft = "default";
 
 
         int sleepSecond = 1000;
@@ -33,52 +33,49 @@ namespace CoreWpfApp.TimerModule
         
         void restTimer(){ //this method must be performed In RESTWINDOW window
             DateTime RestIntervalLeft = MinTime.AddMinutes(restInterval); //00:05:00
+            RestWindow restWindow = new RestWindow();
+            restWindow.Show();
+            
             while (MinTime <= RestIntervalLeft)
             {
                 RestIntervalLeft.AddSeconds(-1);
-                string WorkLeftShow = RestIntervalLeft.ToString("D");
+                string RestLeftShow = RestIntervalLeft.ToString("D");
+                restWindow.RestTextBlock.Text = RestLeftShow;
                 
-                //xaml разметка textbox.text = restLeftShow;
-
                 Thread.Sleep(sleepSecond);        //wait 1 second        
             }
             //actions after 'while':
             //if button"продолжить работу" pressed, resttime left should be added to the next resttime. window closed. method worktimerAsync runs.
+            
         }
 
-        void workTimer(){
+        void workTimer(MainWindow mainWindow)
+        {
             DateTime WorkIntervalLeft = MinTime.AddMinutes(workInterval); //00:25:00
             while (MinTime <= WorkIntervalLeft)
             {
                 WorkIntervalLeft.AddSeconds(-1);
-                string WorkLeftShow = WorkIntervalLeft.ToString("D");
-                //xaml разметка textbox.text = WorkLeftShow;
+                //WorkLeft = WorkIntervalLeft.ToString("D");
+                mainWindow.WorkingTimeTxtBlock.Text = WorkIntervalLeft.ToString("D");
 
                 Thread.Sleep(sleepSecond);        //wait 1 second  
 
-            if(MinTime == WorkIntervalLeft)      {
-                    //actions after 'while': see below in this block
-
-                RestWindow restWindow = new RestWindow();                
-                
-                restWindow.Show();
-                restTimerAsync(); //method runs once restwindow has been shown.
-                
+            if(MinTime == WorkIntervalLeft){
+                    restTimerAsync();
                 }
             }
             
         }
 
 
-        public async void workTimerAsync(){
-            
+        public async void workTimerAsync(MainWindow mainWindow)
+        {            
             {
-                await(Task.Run(()=>workTimer()));
+                await(Task.Run(() =>workTimer(mainWindow)));
             }
         }
 
-        public async void restTimerAsync(){
-            
+        public async void restTimerAsync(){            
             {
                 await(Task.Run(()=>restTimer()));
             }

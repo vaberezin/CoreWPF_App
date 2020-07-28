@@ -24,17 +24,15 @@ namespace CoreWpfApp
     /// </summary>
     public partial class RestWindow : Window
     {
-        PomoTimer pomoTimer1 = new PomoTimer();
-        RestTextBlock.Text = pomoTimer1.RestLeft;
+        PomoTimer pt = new PomoTimer();
         public RestWindow()
         {
             InitializeComponent(); 
-            pomoTimer1.restTimerAsync();   
-                   
         }
         
         private void ContinueWorkButton_Click(object sender, RoutedEventArgs e){
             this.Close();
+            //pt.RestTimerAsync();  --MANAGE WITH IT
             
         }
                

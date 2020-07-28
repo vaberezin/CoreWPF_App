@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Prog\source\repos\corewpf_app\App.xaml
-3247955496
+41832834674
 
-19-1346755247
+19-460130610
 2341448050531
-MainWindow.xaml;RainFlowCalcDictionary.xaml;RainFlowCalcWindow.xaml;
+MainWindow.xaml;RainFlowCalcDictionary.xaml;RainFlowCalcWindow.xaml;RestWindow.xaml;
 
 False
 

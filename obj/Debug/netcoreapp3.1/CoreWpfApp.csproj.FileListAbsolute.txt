@@ -119,7 +119,6 @@ C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\System.Collection
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
-C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.csprojAssemblyReference.cache
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RainFlowCalcWindow.g.cs
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\App.g.cs
@@ -140,3 +139,5 @@ C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.genrun
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RainFlowCalcDictionary.baml
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RestWindow.g.cs
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RestWindow.baml
+C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RestWindow.g.cs
+C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RestWindow.baml
