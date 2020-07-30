@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CoreWpfApp.TimerModule;
+using System.Threading;
 
 
 
@@ -27,20 +28,25 @@ namespace CoreWpfApp
         {
             
             InitializeComponent();
+            //var sync = SynchronizationContext.Current; //loading syncronization at application start.
         }
-        
-        
+
+        SynchronizationContext context = SynchronizationContext.Current;
         private void ButtoRainFlowCalcBtn_Click(object sender, RoutedEventArgs e){
            
            RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
            rainFlowCalc.Show();
-
+           
         }
         PomoTimer pt = new PomoTimer();
         private void TimerBtn_Click(object sender, RoutedEventArgs e)
         {
             
-            pt.workTimerAsync(this);
+            Thread thread = new Thread(new ParameterizedThreadStart(pt.workTimer));
+            thread.Start(this);
+            context.Send(pt.workTimer, this);
+
+            
             //this.WorkingTimeTxtBlock.Text = pt.WorkLeft;
         }
     }

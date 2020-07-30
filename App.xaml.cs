@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Data.OleDb;
 using CoreWpfApp.TimerModule;
-
+using System.Threading;
 
 namespace CoreWpfApp
 {
@@ -16,8 +16,11 @@ namespace CoreWpfApp
     /// </summary>
     public partial class App : Application
     {
-        
-
+        //public App()
+        //{
+            
+        //}
+       
 
     }
 }

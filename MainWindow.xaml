@@ -17,10 +17,11 @@
         >
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>          
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="320*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -29,19 +30,19 @@
             <RowDefinition Height="*"/>
             <RowDefinition x:Name="LastRow" Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="YandexMusicBtn" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Content="Яндекс.Музыка API" FontSize="24"></Button>
-        <Button x:Name="YandexWeatherBtn" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2" Content="Яндекс.Погода API" FontSize="24"></Button>
-        <Button x:Name="RainFlowCalcBtn" Grid.Column="0" Grid.Row="1"  Content="Расчет ливневки"  FontSize="18" Click="ButtoRainFlowCalcBtn_Click"></Button>
-        <Button x:Name="RegulationsBtn" Grid.Column="1" Grid.Row="1" Content="СНиП, СП" FontSize="18"/>
-        <Button x:Name="FireFightBtn" Grid.Column="2" Grid.Row="1" Content="Пожаротушение" FontSize="18"/>
-        <Button x:Name="InnerVkBtn" Grid.Column="0" Grid.Row="2" Content="ВК" FontSize="18"/>
-        <Button x:Name="WellsBtn" Grid.Column="0" Grid.Row="2" Content="Подбор колодцев" FontSize="18"/>
-        <Button x:Name="TaskMgrBtn" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Content="Менеджер задач с историей" FontSize="24"/>
-        <Button x:Name="YandexMapsBtn" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Content="Быстрый маршрут по Яндекс.Картам" FontSize="18"/>
-        <Button x:Name="TimerBtn" Grid.Column="3" Grid.Row="3" Height="{Binding ElementName=LastRow, Path=Height}" MinHeight="100" Content="Запустить таймер" FontSize="24" Opacity="0.8" Background="CadetBlue" Click="TimerBtn_Click" />
+        <Button x:Name="YandexMusicBtn" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Яндекс.Музыка API" FontSize="24" Margin="0,38,0,39"></Button>
+        <Button x:Name="YandexWeatherBtn" Grid.Column="4" Grid.Row="0" Content="Яндекс.Погода API" FontSize="24" Margin="0,38,0,39"/>
+        <Button x:Name="RainFlowCalcBtn" Grid.Column="0" Grid.Row="1"  Content="Расчет ливневки"  FontSize="18" Click="ButtoRainFlowCalcBtn_Click" Margin="0,38,0,38"></Button>
+        <Button x:Name="RegulationsBtn" Grid.Column="1" Grid.Row="1" Content="СНиП, СП" FontSize="18" Margin="0,38,0,38"/>
+        <Button x:Name="FireFightBtn" Grid.Column="2" Grid.Row="1" Content="Пожаротушение" FontSize="18" Grid.ColumnSpan="2" Margin="0,38,0,38"/>
+        <Button x:Name="InnerVkBtn" Grid.Column="0" Grid.Row="2" Content="ВК" FontSize="18" Margin="0,38,0,39"/>
+        <Button x:Name="WellsBtn" Grid.Column="0" Grid.Row="2" Content="Подбор колодцев" FontSize="18" Margin="0,38,0,39"/>
+        <Button x:Name="TaskMgrBtn" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Content="Менеджер задач с историей" FontSize="24" Margin="0,38,0,38"/>
+        <Button x:Name="YandexMapsBtn" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Content="Быстрый маршрут по Яндекс.Картам" FontSize="18" Margin="0,38,0,39"/>
+        <Button x:Name="TimerBtn" Grid.Column="4" Grid.Row="3" Height="{Binding ElementName=LastRow, Path=Height}" MinHeight="100" Content="Запустить таймер" FontSize="24" Opacity="0.8" Background="CadetBlue" Click="TimerBtn_Click" Margin="0,4,0,4" />
 
-        <TextBlock x:Name="WorkingText" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" Text="Работаем в своем темпе :)" FontSize="18" TextAlignment="Center" Margin="5"/>
-        <TextBlock x:Name="WorkingTimeTxtBlock" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" Text="Вперед!" FontSize="18" TextAlignment="Center" Margin="5"/>
+        <TextBlock x:Name="WorkingText" Grid.Column="4" Grid.Row="1" VerticalAlignment="Center" Text="Работаем в своем темпе :)" FontSize="18" TextAlignment="Center" Margin="5,0,5,0"/>
+        <TextBlock x:Name="WorkingTimeTxtBlock" Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" Text="Вперед!" FontSize="18" TextAlignment="Center" Margin="5,0,5,0"/>
 
     </Grid>
 </Window>

@@ -141,3 +141,4 @@ C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RestWindow.g.cs
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RestWindow.baml
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RestWindow.g.cs
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RestWindow.baml
+C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.csprojAssemblyReference.cache

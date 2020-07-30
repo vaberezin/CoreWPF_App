@@ -28,10 +28,10 @@ namespace CoreWpfApp.TimerModule
 
         int sleepSecond = 1000;
 
-        DateTime MinTime = new DateTime(0001,01,01,00,00,00);        
-        
-        
-        void restTimer(){ //this method must be performed In RESTWINDOW window
+        DateTime MinTime = new DateTime(0001,01,01,00,00,00);
+
+
+        internal void restTimer(){ //this method must be performed In RESTWINDOW window
             DateTime RestIntervalLeft = MinTime.AddMinutes(restInterval); //00:05:00
             RestWindow restWindow = new RestWindow();
             restWindow.Show();
@@ -49,36 +49,39 @@ namespace CoreWpfApp.TimerModule
             
         }
 
-        void workTimer(MainWindow mainWindow)
+        internal void workTimer(Object mainWindow)
         {
             DateTime WorkIntervalLeft = MinTime.AddMinutes(workInterval); //00:25:00
             while (MinTime <= WorkIntervalLeft)
             {
                 WorkIntervalLeft.AddSeconds(-1);
                 //WorkLeft = WorkIntervalLeft.ToString("D");
-                mainWindow.WorkingTimeTxtBlock.Text = WorkIntervalLeft.ToString("D");
+                MainWindow mwin = (MainWindow)mainWindow;
+                mwin.WorkingTimeTxtBlock.Text = WorkIntervalLeft.ToString("D");
 
                 Thread.Sleep(sleepSecond);        //wait 1 second  
 
             if(MinTime == WorkIntervalLeft){
-                    restTimerAsync();
+                    restTimer();
                 }
             }
             
         }
 
 
-        public async void workTimerAsync(MainWindow mainWindow)
-        {            
-            {
-                await(Task.Run(() =>workTimer(mainWindow)));
-            }
-        }
+        
 
-        public async void restTimerAsync(){            
-            {
-                await(Task.Run(()=>restTimer()));
-            }
-        }
+        //public async void workTimerAsync(MainWindow mainWindow)
+        //{            
+        //    {
+        //        await(Task.Run(() =>workTimer(mainWindow)));
+        //    }
+        //}
+
+        //public async void restTimerAsync(){            
+        //    {
+        //        await(Task.Run(()=>restTimer()));
+        //    }
+        //}
     }
 }
