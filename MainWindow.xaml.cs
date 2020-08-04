@@ -24,14 +24,13 @@ namespace CoreWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-                public MainWindow()
+         public MainWindow()
         {
             
-            InitializeComponent();
-            //var sync = SynchronizationContext.Current; //loading syncronization at application start.
+        InitializeComponent();
         }
 
-        SynchronizationContext context = SynchronizationContext.Current;
+        internal RestWindow restWindow;
         private void ButtoRainFlowCalcBtn_Click(object sender, RoutedEventArgs e){
            
            RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
@@ -44,10 +43,20 @@ namespace CoreWpfApp
             
             Thread thread = new Thread(new ParameterizedThreadStart(pt.workTimer));
             thread.Start(this);
-            context.Send(pt.workTimer, this);
-
             
-            //this.WorkingTimeTxtBlock.Text = pt.WorkLeft;
+        }
+
+        
+
+        private void PlitkaApp_Closed(object sender, EventArgs e)
+        {
+            this.Dispatcher.InvokeShutdown();
+        }
+
+        private void RegulationsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Thread thread2 = new Thread(new ParameterizedThreadStart(pt.restTimer));
+            thread2.Start(this);
         }
     }
 }

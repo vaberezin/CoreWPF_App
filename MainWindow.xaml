@@ -12,16 +12,16 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="12"
         FontFamily="{materialDesign:MaterialDesignFont}"
-        Name="PlitkaApp"
+        Name="PlitkaApp" Closed="PlitkaApp_Closed"
         
         >
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="141*"/>
-            <ColumnDefinition Width="320*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -33,7 +33,7 @@
         <Button x:Name="YandexMusicBtn" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Яндекс.Музыка API" FontSize="24" Margin="0,38,0,39"></Button>
         <Button x:Name="YandexWeatherBtn" Grid.Column="4" Grid.Row="0" Content="Яндекс.Погода API" FontSize="24" Margin="0,38,0,39"/>
         <Button x:Name="RainFlowCalcBtn" Grid.Column="0" Grid.Row="1"  Content="Расчет ливневки"  FontSize="18" Click="ButtoRainFlowCalcBtn_Click" Margin="0,38,0,38"></Button>
-        <Button x:Name="RegulationsBtn" Grid.Column="1" Grid.Row="1" Content="СНиП, СП" FontSize="18" Margin="0,38,0,38"/>
+        <Button x:Name="RegulationsBtn" Grid.Column="1" Grid.Row="1" Content="СНиП, СП" FontSize="18" Margin="0,38,0,38" Click="RegulationsBtn_Click"/>
         <Button x:Name="FireFightBtn" Grid.Column="2" Grid.Row="1" Content="Пожаротушение" FontSize="18" Grid.ColumnSpan="2" Margin="0,38,0,38"/>
         <Button x:Name="InnerVkBtn" Grid.Column="0" Grid.Row="2" Content="ВК" FontSize="18" Margin="0,38,0,39"/>
         <Button x:Name="WellsBtn" Grid.Column="0" Grid.Row="2" Content="Подбор колодцев" FontSize="18" Margin="0,38,0,39"/>
