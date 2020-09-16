@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CoreWpfApp;
 using CoreWpfApp.TimerModule;
+using System.Threading;
 
 
 
@@ -27,7 +28,8 @@ namespace CoreWpfApp
         PomoTimer pt = new PomoTimer();
         public RestWindow()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            
         }
         
         private void ContinueWorkButton_Click(object sender, RoutedEventArgs e){
@@ -35,6 +37,13 @@ namespace CoreWpfApp
             //pt.RestTimerAsync();  --MANAGE WITH IT
             
         }
-               
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Thread thread = new Thread(new ParameterizedThreadStart(pt.restTimer));
+            thread.Start(this);
+
+        }
     }
 }

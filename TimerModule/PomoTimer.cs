@@ -20,36 +20,34 @@ namespace CoreWpfApp.TimerModule
     public class PomoTimer
     {
 
-        int workInterval = 25; //default value
-        int restInterval = 5; //default value
+        private int workInterval = 25; //default value
+        private int restInterval = 5; //default value
+        private int Second = 1000;
 
         public string RestLeft = "default";
         //public string WorkLeft = "default";
-        
 
-        int sleepSecond = 1000;
+        DateTime MinTime = new DateTime(0001, 01, 01, 00, 00, 00);
 
-        DateTime MinTime = new DateTime(0001,01,01,00,00,00);
-        
 
-        internal void restTimer(object mainWindow)
+        internal void restTimer(object restWindow)
         { //this method must be performed In RESTWINDOW window
             DateTime RestIntervalLeft = MinTime.AddMinutes(restInterval); //00:05:00
-            MainWindow main = (MainWindow)mainWindow;
-            RestWindow rw = main.restWindow;
+            
+            RestWindow rw = (RestWindow)restWindow;//?????!!!!!!
             rw.Show();
-            
-            
-            
+
+
+
             while (MinTime <= RestIntervalLeft)
             {
                 RestIntervalLeft = RestIntervalLeft.AddSeconds(-1);
-                main.Dispatcher.BeginInvoke(() =>
+                rw.Dispatcher.BeginInvoke(() =>
                 {
                     rw.RestTextBlock.Text = RestIntervalLeft.ToString("T");
                 });
 
-                Thread.Sleep(sleepSecond);        //wait 1 second        
+                Thread.Sleep(Second);        //wait 1 second        
             }
             //actions after 'while':
             //if button"продолжить работу" pressed, resttime left should be added to the next resttime. window closed. method worktimerAsync runs.
@@ -64,6 +62,11 @@ namespace CoreWpfApp.TimerModule
             while (MinTime < WorkIntervalLeft)
             {
                 WorkIntervalLeft = WorkIntervalLeft.AddSeconds(-1);
+
+                
+
+
+
                 main.Dispatcher.BeginInvoke(() =>
                 {
                     main.WorkingTimeTxtBlock.Text = WorkIntervalLeft.ToString("T");
@@ -76,7 +79,17 @@ namespace CoreWpfApp.TimerModule
 
             if (MinTime == WorkIntervalLeft)
             {
-                restTimer(main);
+
+                
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    RestWindow rwin = new RestWindow();
+                    rwin.Owner = main;
+                    rwin.Show();
+                    
+                });
+                
+
 
             }
 

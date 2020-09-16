@@ -30,7 +30,8 @@ namespace CoreWpfApp
         InitializeComponent();
         }
 
-        internal RestWindow restWindow;
+        
+        
         private void ButtoRainFlowCalcBtn_Click(object sender, RoutedEventArgs e){
            
            RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
