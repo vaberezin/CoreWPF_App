@@ -32,17 +32,16 @@ namespace CoreWpfApp
             
         }
         
-        private void ContinueWorkButton_Click(object sender, RoutedEventArgs e){
+        private void ContinueWorkButton_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
-            //pt.RestTimerAsync();  --MANAGE WITH IT
-            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            //Thread thread = new Thread(new ThreadStart(pt.restTimer));
-            //thread.Start(this);
+            Thread thread = new Thread(new ParameterizedThreadStart(pt.restTimer));
+            thread.Start(this);
 
         }
     }

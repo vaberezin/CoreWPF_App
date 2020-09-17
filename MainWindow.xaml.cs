@@ -25,9 +25,8 @@ namespace CoreWpfApp
     public partial class MainWindow : Window
     {
          public MainWindow()
-        {
-            
-        InitializeComponent();
+        {            
+            InitializeComponent();
         }
 
         
@@ -56,8 +55,8 @@ namespace CoreWpfApp
 
         private void RegulationsBtn_Click(object sender, RoutedEventArgs e)
         {
-            Thread thread2 = new Thread(new ParameterizedThreadStart(pt.restTimer));
-            thread2.Start(this);
+            //Thread thread2 = new Thread(new ParameterizedThreadStart(pt.restTimer));
+            //thread2.Start(this);
         }
     }
 }
