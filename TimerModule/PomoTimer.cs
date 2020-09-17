@@ -21,7 +21,7 @@ namespace CoreWpfApp.TimerModule
     {
 
         private int workInterval = 25; //default value
-        private int restInterval = 5; //default value
+        private int restInterval = 30; //default value
         private int Second = 1000;
 
         public string RestLeft = "default";
@@ -30,27 +30,43 @@ namespace CoreWpfApp.TimerModule
         DateTime MinTime = new DateTime(0001, 01, 01, 00, 00, 00);
 
 
-        internal void restTimer(object restWindow)
+        internal void restTimer(object mainWindow)
         { //this method must be performed In RESTWINDOW window
-            DateTime RestIntervalLeft = MinTime.AddMinutes(restInterval); //00:05:00
+            DateTime RestIntervalLeft = MinTime.AddSeconds(restInterval); //00:00:02
+            MainWindow main = (MainWindow)mainWindow;
             
-            RestWindow rw = (RestWindow)restWindow;//?????!!!!!!
-            rw.Show();
 
-
-
-            while (MinTime <= RestIntervalLeft)
-            {
-                RestIntervalLeft = RestIntervalLeft.AddSeconds(-1);
-                rw.Dispatcher.BeginInvoke(() =>
+                //testing
+                main.Dispatcher.BeginInvoke(() =>
                 {
-                    rw.RestTextBlock.Text = RestIntervalLeft.ToString("T");
+                    RestWindow rwin = new RestWindow();
+                    rwin.Owner = main;
+                    //rwin.Show();
+                    
+                    while (MinTime < RestIntervalLeft)
+                {
+                RestIntervalLeft = RestIntervalLeft.AddSeconds(-1);
+                rwin.Dispatcher.BeginInvoke(() =>
+                {
+                    rwin.RestTextBlock.Text = RestIntervalLeft.ToString("T");
                 });
+                Thread.Sleep(3);        //wait 1 second     
 
-                Thread.Sleep(Second);        //wait 1 second        
+                
+                if(true){
+                    int zzz = 1;
+                }
+                                  
             }
             //actions after 'while':
             //if button"продолжить работу" pressed, resttime left should be added to the next resttime. window closed. method worktimerAsync runs.
+
+
+                });
+                //testing
+
+
+            
 
         }
 
@@ -63,34 +79,25 @@ namespace CoreWpfApp.TimerModule
             {
                 WorkIntervalLeft = WorkIntervalLeft.AddSeconds(-1);
 
-                
-
-
-
                 main.Dispatcher.BeginInvoke(() =>
                 {
                     main.WorkingTimeTxtBlock.Text = WorkIntervalLeft.ToString("T");
                 });
-                Thread.Sleep(10);
+                //wait 1 second  
+                Thread.Sleep(3);
             }
 
 
-            //wait 1 second  
-
-            if (MinTime == WorkIntervalLeft)
+            if (MinTime == WorkIntervalLeft) // 0 seconds of work left
             {
 
                 
-                Application.Current.Dispatcher.Invoke(() =>
+                main.Dispatcher.BeginInvoke(() =>
                 {
-                    RestWindow rwin = new RestWindow();
-                    rwin.Owner = main;
-                    rwin.Show();
+                    restTimer(mainWindow);
                     
                 });
-                
-
-
+                                
             }
 
             

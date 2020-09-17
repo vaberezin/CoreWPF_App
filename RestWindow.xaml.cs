@@ -41,8 +41,8 @@ namespace CoreWpfApp
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            Thread thread = new Thread(new ParameterizedThreadStart(pt.restTimer));
-            thread.Start(this);
+            //Thread thread = new Thread(new ThreadStart(pt.restTimer));
+            //thread.Start(this);
 
         }
     }

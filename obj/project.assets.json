@@ -7033,26 +7033,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Prog\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Prog\\source\\repos\\corewpf_app\\CoreWpfApp.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\CoreWpfApp\\CoreWpfApp.csproj",
       "projectName": "CoreWpfApp",
-      "projectPath": "C:\\Users\\Prog\\source\\repos\\corewpf_app\\CoreWpfApp.csproj",
-      "packagesPath": "C:\\Users\\Prog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Prog\\source\\repos\\corewpf_app\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\CoreWpfApp\\CoreWpfApp.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\CoreWpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Prog\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
