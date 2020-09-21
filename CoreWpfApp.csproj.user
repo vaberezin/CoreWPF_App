@@ -2,7 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="RegulationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="RainFlowCalcDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegulationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

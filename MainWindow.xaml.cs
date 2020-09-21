@@ -33,5 +33,11 @@ namespace CoreWpfApp
            RainFlowCalcWindow rainFlowCalc = new RainFlowCalcWindow();
            rainFlowCalc.Show();
         }
+
+        private void RegulationsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RegulationWindow regWin = new RegulationWindow();
+            regWin.Owner = this;
+        }
     }
 }

@@ -31,7 +31,7 @@
         <Button x:Name="YandexMusicBtn" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Content="Яндекс.Музыка API" FontSize="24"></Button>
         <Button x:Name="YandexWeatherBtn" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2" Content="Яндекс.Погода API" FontSize="24"></Button>
         <Button x:Name="RainFlowCalcBtn" Grid.Column="0" Grid.Row="1"  Content="Расчет ливневки"  FontSize="18" Click="ButtoRainFlowCalcBtn_Click"></Button>
-        <Button x:Name="RegulationsBtn" Grid.Column="1" Grid.Row="1" Content="СНиП, СП" FontSize="18"/>
+        <Button x:Name="RegulationsBtn" Grid.Column="1" Grid.Row="1" Content="СНиП, СП" FontSize="18" Click="RegulationsBtn_Click"/>
         <Button x:Name="FireFightBtn" Grid.Column="2" Grid.Row="1" Content="Пожаротушение" FontSize="18"/>
         <Button x:Name="InnerVkBtn" Grid.Column="0" Grid.Row="2" Content="ВК" FontSize="18"/>
         <Button x:Name="WellsBtn" Grid.Column="0" Grid.Row="2" Content="Подбор колодцев" FontSize="18"/>
