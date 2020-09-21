@@ -28,21 +28,21 @@ namespace CoreWpfApp
         PomoTimer pt = new PomoTimer();
         public RestWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
         
         private void ContinueWorkButton_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow temp = this.Owner as MainWindow; //idk how to get access another way....
+            temp.Work();            
             this.Close();
+            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
+        {   
             Thread thread = new Thread(new ParameterizedThreadStart(pt.restTimer));
             thread.Start(this);
-
         }
     }
 }
