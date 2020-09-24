@@ -1,0 +1,30 @@
+﻿<Window x:Class="CoreWpfApp.RegulationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoreWpfApp"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>            
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px"  ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.ColumnSpan="4" Content="Перечень часто используемых норм по марке ВК" HorizontalAlignment="Center" Name="Header" VerticalAlignment="Stretch" Width="800" FontWeight="Bold" FontSize="16" FontStyle="Italic" FontFamily="Sans-Serif" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFCDCACA"></Label>
+        <ListView Grid.Row="1" Grid.ColumnSpan="3" x:Name="RegulationsList" ItemsSource="{DynamicResource ResourceKey=RegulationsListResourceKey}">
+            <GridView>                
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=RegName}"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=RegCode}"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=RegLink}"></GridViewColumn>
+            </GridView>
+        </ListView>
+
+    </Grid>
+</Window>
