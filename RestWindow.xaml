@@ -8,14 +8,22 @@
         Title="Группа ВК" Height="450" Width="800"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
+        
         TextElement.FontWeight="Medium"
         TextElement.FontSize="12"
         FontFamily="{materialDesign:MaterialDesignFont}" Loaded="Window_Loaded"
+        Topmost = "True"        
+        WindowState = "Maximized"
+        AllowsTransparency="True" WindowStyle="None"
         
         >
+    <Window.Background>
+        <SolidColorBrush Opacity="0.5" Color="White"/>
+    </Window.Background>
     <Grid>
-
+    <Grid.Background>
+        <SolidColorBrush Opacity="0.5" Color="White"/>
+    </Grid.Background>
 
     <Grid.RowDefinitions>
         <RowDefinition Height="*"/>

@@ -22,7 +22,7 @@ namespace CoreWpfApp.TimerModule
 
         private int workInterval = 25; //default value
         private int restInterval = 5; //default value
-        private int Second = 1000;
+        //private int Second = 1000;
 
         public string RestLeft = "default";
         //public string WorkLeft = "default";
@@ -33,7 +33,7 @@ namespace CoreWpfApp.TimerModule
         internal void restTimer(object rwind)   //this method must be performed In RESTWINDOW window
         {
             RestWindow rwin = rwind as RestWindow;
-            DateTime RestIntervalLeft = MinTime.AddSeconds(restInterval); //00:00:30
+            DateTime RestIntervalLeft = MinTime.AddMinutes(restInterval); //00:00:30
             //MainWindow main = mainWindow as MainWindow;
             
             //RestWindow rwin = new RestWindow();            
@@ -49,7 +49,7 @@ namespace CoreWpfApp.TimerModule
                 {
                     rwin.RestTextBlock.Text = RestIntervalLeft.ToString("T");
                 });
-                Thread.Sleep(Second);        //wait 1 second     
+                Thread.Sleep(1000);        //wait 1 second     
 
 
                 if (MinTime == RestIntervalLeft) // 0 seconds of work left
@@ -95,6 +95,7 @@ namespace CoreWpfApp.TimerModule
                 {
                     main.WorkingTimeTxtBlock.Text = $"0:{workInterval}:00";
                     RestWindow rwin = new RestWindow();
+                    rwin.Owner = (MainWindow)mainWindow; // setting rwin window's owner
                     rwin.Show();
                 });
                                 

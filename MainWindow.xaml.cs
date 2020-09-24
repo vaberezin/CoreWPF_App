@@ -38,7 +38,7 @@ namespace CoreWpfApp
            
         }
         PomoTimer pt = new PomoTimer();
-        private void TimerBtn_Click(object sender, RoutedEventArgs e)
+        public void TimerBtn_Click(object sender, RoutedEventArgs e)
         {
             
             Thread thread = new Thread(new ParameterizedThreadStart(pt.workTimer));
@@ -46,7 +46,10 @@ namespace CoreWpfApp
             
         }
 
-        
+        public void Work(){
+            Thread thread = new Thread(new ParameterizedThreadStart(pt.workTimer));
+            thread.Start(this);
+        }
 
         private void PlitkaApp_Closed(object sender, EventArgs e)
         {
