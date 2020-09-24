@@ -18,6 +18,15 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.ColumnSpan="4" Content="Перечень часто используемых норм по марке ВК" HorizontalAlignment="Center" Name="Header" VerticalAlignment="Stretch" Width="800" FontWeight="Bold" FontSize="16" FontStyle="Italic" FontFamily="Sans-Serif" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFCDCACA"></Label>
-
+        <ListView Grid.Row="1" Grid.ColumnSpan="3" x:Name="VKRegsList">
+            <ListView.View>
+                <GridView>                    
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Path=Id}"></GridViewColumn>
+                    <GridViewColumn Header="Наименование" DisplayMemberBinding="{Binding Path=RegName}"></GridViewColumn>
+                    <GridViewColumn Header="Обозначение" DisplayMemberBinding="{Binding Path=RegCode}"></GridViewColumn>
+                    <GridViewColumn Header="Ссылка" DisplayMemberBinding="{Binding Path=RegLink}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

@@ -25,7 +25,7 @@ namespace CoreWpfApp.AppDB
         public virtual DbSet<Table15K1PlimCN> Table15K1PlimCN { get; set; }
         public virtual DbSet<Table16K2PlimC> Table16K2PlimC { get; set; }
         public virtual DbSet<Table9K> Table9K { get; set; }
-        public virtual DbSet<Regulations> Regulations { get; set; }
+        public virtual DbSet<Regulation> Regulations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

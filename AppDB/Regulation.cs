@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CoreWpfApp.AppDB
 {
-    public class Regulations
+    public class Regulation
     {
         public int Id { get; set; }
         public string RegName { get; set; }

@@ -38,6 +38,7 @@ namespace CoreWpfApp
         {
             RegulationWindow regWin = new RegulationWindow();
             regWin.Owner = this;
+            regWin.Show();
         }
     }
 }

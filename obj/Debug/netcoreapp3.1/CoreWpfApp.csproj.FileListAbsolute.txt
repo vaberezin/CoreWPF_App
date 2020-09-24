@@ -139,9 +139,9 @@ C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.genrun
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RainFlowCalcDictionary.baml
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RegulationWindow.g.cs
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RegulationWindow.baml
-C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.csprojAssemblyReference.cache
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\appsettings.json
