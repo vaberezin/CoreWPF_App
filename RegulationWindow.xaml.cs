@@ -23,12 +23,14 @@ namespace CoreWpfApp
 
         public RegulationWindow()
         {
+
             InitializeComponent();
             getList();
             RegGrid.ItemsSource = RegulationList;
             //VKRegsList.ItemsSource = RegulationList;
         }
 
+        
         void getList()
         {
             RegulationsModel RModel = new RegulationsModel();
