@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\obj\Debug\netcoreapp3.1\
+C:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\obj\Debug\netcoreapp3.1\
 CoreWpfApp
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-c:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\App.xaml
-4746170953
+C:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\App.xaml
+4-450771627
 
-25-1010554671
-239-1148474714
+24-1856965979
+2391025188815
 MainWindow.xaml;RainFlowCalcDictionary.xaml;RainFlowCalcWindow.xaml;RegulationWindow.xaml;
 
-True
+False
 

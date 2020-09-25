@@ -10,16 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CoreWpfApp
-{
-    
-    public partial class RegulationWindow : Window
+{    
+    public partial class RegulationWindow : NavigationWindow
     {
 
         ObservableCollection<Regulation> RegulationList;
-
+        
 
         public RegulationWindow()
         {

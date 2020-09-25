@@ -37,8 +37,14 @@ namespace CoreWpfApp
         private void RegulationsBtn_Click(object sender, RoutedEventArgs e)
         {
             RegulationWindow regWin = new RegulationWindow();
-            regWin.Owner = this;
+            //regWin.Owner = this;
+            //regWin.WindowState.Maximized;
+            WindowState ws = WindowState.Maximized;
+            
+            regWin.ResizeMode = 
             regWin.Show();
+            
+            
         }
     }
 }

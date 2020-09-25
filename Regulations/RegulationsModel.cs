@@ -10,17 +10,13 @@ namespace CoreWpfApp
     public class RegulationsModel
     {
         public ObservableCollection<Regulation> _getRegulations;
-        //public IEnumerable<Regulations> Load()
-        //{
-            
-            
-        //}
+        
 
         public RegulationsModel()
         {
             using (projectappdbContext db = new projectappdbContext())
             {
-                var GiveMeDataGridRows = db.Regulations.Where(reg => reg.Id >=25);
+                var GiveMeDataGridRows = db.Regulations.Where(reg => reg.Id >=1);
                 _getRegulations = new ObservableCollection<Regulation>(GiveMeDataGridRows);
             }
         }
