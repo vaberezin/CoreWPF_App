@@ -18,6 +18,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.ColumnSpan="4" Content="Перечень часто используемых норм по марке ВК" HorizontalAlignment="Center" Name="Header" VerticalAlignment="Stretch" Width="800" FontWeight="Bold" FontSize="16" FontStyle="Italic" FontFamily="Sans-Serif" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFCDCACA"></Label>
+        <!--
         <ListView Grid.Row="1" Grid.ColumnSpan="3" x:Name="VKRegsList">
             <ListView.View>
                 <GridView>                    
@@ -28,5 +29,17 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        -->
+
+        <DataGrid Grid.Row="1" Grid.ColumnSpan="3" x:Name = "RegGrid" AutoGenerateColumns = "False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Path=RegName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Обозначение" Binding="{Binding Path=RegCode}"></DataGridTextColumn>
+                <DataGridHyperlinkColumn Header="Ссылка" Binding="{Binding Path=RegLink}"></DataGridHyperlinkColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
     </Grid>
 </Window>

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using CoreWpfApp.AppDB;
 using System.Linq;
+using System.Collections.ObjectModel;
 
 namespace CoreWpfApp
 {
     public class RegulationsModel
     {
-        public IEnumerable<Regulation> _getRegulations;
+        public ObservableCollection<Regulation> _getRegulations;
         //public IEnumerable<Regulations> Load()
         //{
             
@@ -19,7 +20,8 @@ namespace CoreWpfApp
         {
             using (projectappdbContext db = new projectappdbContext())
             {
-                _getRegulations = db.Regulations.Where(reg => reg.Id >=25).ToList();
+                var GiveMeDataGridRows = db.Regulations.Where(reg => reg.Id >=25);
+                _getRegulations = new ObservableCollection<Regulation>(GiveMeDataGridRows);
             }
         }
     }

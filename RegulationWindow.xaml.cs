@@ -1,6 +1,7 @@
 ﻿using CoreWpfApp.AppDB;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,15 +18,15 @@ namespace CoreWpfApp
     public partial class RegulationWindow : Window
     {
 
-        IEnumerable<Regulation> RegulationList;
+        ObservableCollection<Regulation> RegulationList;
 
 
         public RegulationWindow()
         {
             InitializeComponent();
             getList();
-            
-            VKRegsList.ItemsSource = RegulationList;
+            RegGrid.ItemsSource = RegulationList;
+            //VKRegsList.ItemsSource = RegulationList;
         }
 
         void getList()
