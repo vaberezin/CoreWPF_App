@@ -82,7 +82,7 @@ namespace CoreWpfApp.TimerModule
                     main.WorkingTimeTxtBlock.Text = WorkIntervalLeft.ToString("T");
                 });
                 //wait 1 second  
-                Thread.Sleep(1);
+                Thread.Sleep(1000);
             }
 
 
