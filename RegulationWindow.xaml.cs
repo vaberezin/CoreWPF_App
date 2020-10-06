@@ -16,13 +16,13 @@ namespace CoreWpfApp
     
     public partial class RegulationWindow : Window
     {
-        RegulationsModel RegModel;
+        //RegulationsModel RegModel;
         public RegulationWindow()
         {
             InitializeComponent();
-            RegModel = new RegulationsModel();
+            //RegModel = new RegulationsModel();
             //IEnumerable<Regulations> RegulationsListResourceKey = RegModel.Load();
-            RegulationsList.ItemsSource = RegModel.Load();
+            //RegulationsList.ItemsSource = RegModel.Load();
             
         }
 

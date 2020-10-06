@@ -14,8 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CoreWpfApp.TimerModule;
 using System.Threading;
-
-
+using System.Net.Http;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace CoreWpfApp
 {
@@ -60,6 +60,34 @@ namespace CoreWpfApp
         {
             //Thread thread2 = new Thread(new ParameterizedThreadStart(pt.restTimer));
             //thread2.Start(this);
+        }
+
+        private void WorkingText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            //code from api returning the string which the present content changes on
+            string resultString;
+            string PATH = "http://localhost:54504/";
+
+            
+                using (var client = new HttpClient())
+                {
+                    
+                    var response = client.GetAsync(PATH + "/Api/Timer");
+                    string _resultstr = response.Result.Content.ReadAsStringAsync().Result;
+                    resultString = _resultstr;
+                }
+            
+            if (resultString != "")
+            {
+                WorkingText.Text = resultString;
+            }
+            else
+            {
+                WorkingText.Text = "Произошла ошибка";
+            }
+
+
+
         }
     }
 }

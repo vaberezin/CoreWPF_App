@@ -70,7 +70,6 @@ C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RainFlowCalcDictionary.baml
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RestWindow.g.cs
 C:\Users\User\Documents\CoreWpfApp\obj\Debug\netcoreapp3.1\RestWindow.baml
-C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.csprojAssemblyReference.cache
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RainFlowCalcWindow.g.cs
 C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RestWindow.g.cs
@@ -214,3 +213,8 @@ C:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\obj\Debug\netcoreapp3
 C:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\obj\Debug\netcoreapp3.1\CoreWpfApp.AssemblyInfo.cs
 C:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\obj\Debug\netcoreapp3.1\CoreWpfApp.csproj.CopyComplete
 C:\Users\User\Documents\CoreWpfApp\CoreWPF_App\CoreWPF_App\obj\Debug\netcoreapp3.1\CoreWpfApp.genruntimeconfig.cache
+C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RegulationWindow.g.cs
+C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Prog\source\repos\corewpf_app\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\RegulationWindow.baml
+C:\Users\Prog\source\repos\corewpf_app\obj\Debug\netcoreapp3.1\CoreWpfApp.csprojAssemblyReference.cache

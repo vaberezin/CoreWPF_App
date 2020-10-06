@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JtAkrLEzfYodCsb2yQjV5qdz8jZ3jATBg0d+GCwwqT7/8nHZU+KGQdH74hA6zJ8wh+rptkmsszDwnUkaz55MIA==",
+  "dgSpecHash": "9JLEIT+iN3euD7Y4rReLARBHX/tBiNOLf4BUMZkQoCFyaJngMx32qHAHt3oMdfg3EW9KqGK82FyZ6m2hVbUW4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Prog\\source\\repos\\corewpf_app\\CoreWpfApp.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\Prog\\.nuget\\packages\\materialdesigncolors\\1.2.6\\materialdesigncolors.1.2.6.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\materialdesignthemes\\3.1.3\\materialdesignthemes.3.1.3.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\materialdesignthemes.mahapps\\0.1.4\\materialdesignthemes.mahapps.0.1.4.nupkg.sha512",
+    "C:\\Users\\Prog\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -46,6 +47,7 @@
     "C:\\Users\\Prog\\.nuget\\packages\\mysqlconnector\\0.61.0\\mysqlconnector.0.61.0.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Prog\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\3.1.1\\pomelo.entityframeworkcore.mysql.3.1.1.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\pomelo.entityframeworkcore.mysql.design\\1.1.2\\pomelo.entityframeworkcore.mysql.design.1.1.2.nupkg.sha512",
     "C:\\Users\\Prog\\.nuget\\packages\\pomelo.jsonobject\\2.2.1\\pomelo.jsonobject.2.2.1.nupkg.sha512",
